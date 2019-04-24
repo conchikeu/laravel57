@@ -3,9 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="">
-                    <a href="#" class="header-logo"><img class="header-logo-vpv" src="{{asset('public/img/logo-hearder.png')}}"></img></a>
+                    <a href="http://doan2.com/" class="header-logo"><img class="header-logo-vpv" src="{{asset('public/img/logo-hearder.png')}}"></img></a>
                     <div class="user-menu">
                         <form class="header-form" action="" method="get" autocomplete="off">
+                            
                             <input class="stxtfs" type="text" name="" placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm" autocomplete="off" maxlength="50">
                             <button type="submit" class="header-search-button"><i class="fa fa-search"></i>
                             </button>

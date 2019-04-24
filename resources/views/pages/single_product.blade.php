@@ -31,8 +31,8 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="product-images">
-                                        <div class="product-main-img">
-                                            <img src="@if($product->imageDetail->first()){{asset("public/uploads/images/products/" . $product->imageDetail->first()->image_detail)}} @endif"
+                                        <div class="product-main-img ">
+                                            <img class="product-main-img2" src="@if($product->imageDetail->first()){{asset("public/uploads/images/products/" . $product->imageDetail->first()->image_detail)}} @endif"
                                                  alt="">
                                         </div>
 
@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class='row' role="tabpanel" id="description">
+                            <div class='row row2' role="tabpanel" id="description">
                                 <p>{!! $product->description  !!}</p>
                             </div>
                             <div id="fb-root"></div>

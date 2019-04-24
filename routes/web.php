@@ -14,6 +14,15 @@
 
 
 Auth::routes();
+Route::get('pages/list_user/list_user', 'ListUserController@getListUser')->name('list_user');
+
+Route::get('pages/list_user/edit_user', 'ListUserController@getEditUser');
+Route::post('pages/list_user/edit/{id}','ListUserController@edit');
+
+Route::get('pages/list_user/delete/{id}','ListUserController@destroy');
+Route::get('delete-records','ListUserController@index');
+
+
 Route::get('/login','Auth\LoginController@getLogin')->name('get-login-user');
 Route::post('/login','Auth\LoginController@userLogin')->name('login-user');
 Route::get('gen', function(){
@@ -29,6 +38,7 @@ Route::group(['middleware'=>'check_user'],function(){
     Route::put('/edit-password/{id}','Auth\DetailUserController@putPassword');
     Route::get('/delete-product-cart/{id_order}/{id_product}','Auth\DetailUserController@deleteProductCart')->name('delete-product-cart');
     Route::get('delete/{id}','Usercontroller@destroyuser');
+
 });
 
 
@@ -65,5 +75,6 @@ Route::group(['namespace' => 'Web'],function() {
     Route::get('{category}', 'ProductController@index')->name('category-products');
     Route::get('subcate/{slug}', 'ProductController@getProductsBySub')->name('subcate-products');
     Route::get('product/{id}', 'ProductController@show')->name('product-detail');
+
 
 });

@@ -104,13 +104,16 @@ class ProductController extends Controller
             $images = $request->file('image_detail');
             if($images){
                 foreach ($images as $image){
-                    $name = time() . "_" . $image->getClientOriginalName();
+                    $dataname = $images;
+                    $name =$image->getClientOriginalName();
+                    $destinationn = public_path() .'uploads/images/products';
+                    $test = $image->move($destinationn, $name);
+                    //var_dump($name);
+                    //var_dump($test);exit;
                     ImageDetail::create([
                         'image_detail' => $name,
                         'product_id' => $product->id,
                     ]);
-
-                    $image->move('public/uploads/images/products',$name);
                 }
             }
             DB::commit();
@@ -156,6 +159,7 @@ class ProductController extends Controller
         $key = $request->configuration['key'];
         $value = $request->configuration['value'];
         $configuration = array_combine($key,$value);
+        $timeUpdate =  time();
         try {
             DB::beginTransaction();
             $product = Product::findOrFail($id);
@@ -178,12 +182,16 @@ class ProductController extends Controller
             $images = $request->file('image_detail');
             if($images){
                 foreach ($images as $image){
-                    $name = /*time() . "_" . */$image->getClientOriginalName();
+                    $dataname = $images;
+                    $name =$image->getClientOriginalName();
+                    $destinationn = public_path() .'uploads/images/products';
+                    $test = $image->move($destinationn, $name);
+                    //var_dump($name);
+                    //var_dump($test);exit;
                     ImageDetail::create([
                         'image_detail' => $name,
                         'product_id' => $product->id,
                     ]);
-                    $image->move('uploads/images/products',$name);
                 }
             }
             DB::commit();

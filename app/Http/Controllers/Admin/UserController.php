@@ -93,7 +93,7 @@ class UserController extends Controller
     {
         //
     }
-    public function destroyuser($id) {
+    public function destroy($id) {
         $users = User::findOrFail($request->id);
         DB::delete('delete from student where id = ?',[$id]);
    }
