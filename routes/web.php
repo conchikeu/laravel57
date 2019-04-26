@@ -37,7 +37,7 @@ Route::group(['middleware'=>'check_user'],function(){
     Route::get('/edit-password','Auth\DetailUserController@editPassword');
     Route::put('/edit-password/{id}','Auth\DetailUserController@putPassword');
     Route::get('/delete-product-cart/{id_order}/{id_product}','Auth\DetailUserController@deleteProductCart')->name('delete-product-cart');
-    Route::get('delete/{id}','Usercontroller@destroyuser');
+    Route::get('admin/ajax/components/delete/{id}', 'UserController@destroyuser');
 
 });
 
