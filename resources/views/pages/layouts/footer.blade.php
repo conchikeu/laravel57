@@ -18,7 +18,6 @@
                 <div class="footer-menu">
                     <h2 class="footer-wid-title">Điều hướng</h2>
                     <ul>
-                        <li><a href="#">Tài khoản của tôi</a></li>
                         <li><a href="#">Lịch sử mua hàng</a></li>
                         <li><a href="#">Chính sách bảo hành</a></li>
                         <li><a href="#">Chính sách thanh toán</a></li>

@@ -126,7 +126,40 @@
                         }
                     }
                 });
-                ipt_password.attr({'type' : 'password', 'readonly' : 'readonly'});
+                ipt_password.attr({'type' : 'is_admin', 'readonly' : 'readonly'});
+            })
+            // ----------------------------------------
+            $(document).on('click','.is-admin-reset',function(){
+                $(this).find('span.text-is-admin').text('Save');
+                $(this).closest('tr').find('input[type=text]')
+                        .removeAttr('readonly')
+                        .attr({'type' : 'text', 'autofocus' : true })
+                        .val('');
+                $(this).removeClass('btn-warning').addClass('btn-success').attr('id','save');
+            }).on('click','#save',function(){
+                $(this).removeClass('btn-success').addClass('btn-warning').removeAttr('id');
+                $(this).find('span.text-is-admin').text('Reset');
+                var tr = $(this).closest('tr');
+                var ipt_is_admin = tr.find('input[name=is_admin]');
+                var id = tr.attr('data-id');
+                var is_admin = ipt_is_admin.val();
+                $.ajax({
+                    url : '{{ route('users-is-admin') }}',
+                    type : 'POST',
+                    data : {
+                        id : id,
+                        is_admin : is_admin
+                    },
+                    success : function(data){
+                        if(data.success){
+
+                            $('.message').html('<div class=" notify success"><div class="alert alert-success">' + data.success + '</div></div>');
+                        }else{
+                            $('.message').html('<div class=" notify error"><div class="alert alert-danger">' + data.error + '</div></div>');
+                        }
+                    }
+                });
+                ipt_is_admin.attr({'type' : 'is_admin', 'readonly' : 'readonly'});
             })
         });
     </script>

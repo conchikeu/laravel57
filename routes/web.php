@@ -59,6 +59,7 @@ Route::group(['namespace' => 'Admin'],function(){
         Route::get('users', 'UserController@index')->name('users-index');
         Route::get('users/{id}/show', 'UserController@show')->name('users-show');
         Route::post('users/reset-pw', 'UserController@resetPassWord')->name('users-password');
+        Route::post('users/reset-is-admin', 'UserController@resetIsAdmin')->name('users-is-admin');
     });
     Route::get('configuration','AjaxController@getConfiguration')->name('configuration');
     Route::get('filter-products','AjaxController@getfilterProducts')->name('filter-product');

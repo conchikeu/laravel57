@@ -22,89 +22,79 @@
     </style>
 @stop
 @section('content')
-    <div class="slider-area">
+    <div class="container">
+        <div class="slidemenu-wrap">
+            <div class="slider-area">
         <!-- Slider -->
-        <div class="block-slider block-slider4">
-            <ul class="" id="bxslider-home4">
+                <div class="block-slider block-slider4">
+                    <ul class="" id="bxslider-home4">
+                        <li>
+                            <img src="{{asset("public/img/banner3.png")}}" alt="Slide">
+                            {{-- <div class="caption-group">
+                                <h2 class="caption title">
+                                    <span class="primary">iPhone 6 <strong>Plus</strong></span>
+                                </h2>
+                                <h4 class="caption subtitle">Dual SIM</h4>
+                                <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                            </div> --}}
+                        </li>
+                        <li><img src="{{asset("public/img/banner3.png")}}" alt="Slide">
+                           {{--  <div class="caption-group">
+                                <h2 class="caption title">
+                                    by one, get one <span class="primary">50% <strong>off</strong></span>
+                                </h2>
+                                <h4 class="caption subtitle">school supplies & backpacks.*</h4>
+                                <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                            </div> --}}
+                        </li>
+                        <li><img src="{{asset("public/img/banner3.png")}}" alt="Slide">
+                           {{--  <div class="caption-group">
+                                <h2 class="caption title">
+                                    Apple <span class="primary">Store <strong>Ipod</strong></span>
+                                </h2>
+                                <h4 class="caption subtitle">Select Item</h4>
+                                <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                            </div> --}}
+                        </li>
+                        <li><img src="{{asset("public/img/banner3.png")}}" alt="Slide">
+                           {{--  <div class="caption-group">
+                                <h2 class="caption title">
+                                    Apple <span class="primary">Store <strong>Ipod</strong></span>
+                                </h2>
+                                <h4 class="caption subtitle">& Phone</h4>
+                                <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                            </div> --}}
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="rnews">
+                    <h3>Thông Tin Công Nghệ</h3>
+            <ul>
                 <li>
-                    <img src="{{asset("public/img/slide1.jpg")}}" alt="Slide">
-                    {{-- <div class="caption-group">
-                        <h2 class="caption title">
-                            <span class="primary">iPhone 6 <strong>Plus</strong></span>
-                        </h2>
-                        <h4 class="caption subtitle">Dual SIM</h4>
-                        <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                    </div> --}}
+                    <img src="{{asset('public/img/product-thumb-3.jpg')}}" alt="">
+                    <span>testdsadas dsa dasd asd asd asd asd sad asd asd asd sa</span>
                 </li>
-                <li><img src="{{asset("public/img/banner4.jpg")}}" alt="Slide">
-                   {{--  <div class="caption-group">
-                        <h2 class="caption title">
-                            by one, get one <span class="primary">50% <strong>off</strong></span>
-                        </h2>
-                        <h4 class="caption subtitle">school supplies & backpacks.*</h4>
-                        <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                    </div> --}}
+                <li>
+                    <img src="{{asset('public/img/product-thumb-3.jpg')}}" alt="">
+                    <span>testdsadas dsa dasd asd asd asd asd sad asd asd asd sa</span>
                 </li>
-                <li><img src="{{asset("public/img/banner3.jpg")}}" alt="Slide">
-                   {{--  <div class="caption-group">
-                        <h2 class="caption title">
-                            Apple <span class="primary">Store <strong>Ipod</strong></span>
-                        </h2>
-                        <h4 class="caption subtitle">Select Item</h4>
-                        <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                    </div> --}}
+                <li>
+                    <img src="{{asset('public/img/product-thumb-3.jpg')}}" alt="">
+                    <span>testdsadas dsa dasd asd asd asd asd sad asd asd asd sa</span>
                 </li>
-                <li><img src="{{asset("public/img/slide5.png")}}" alt="Slide">
-                   {{--  <div class="caption-group">
-                        <h2 class="caption title">
-                            Apple <span class="primary">Store <strong>Ipod</strong></span>
-                        </h2>
-                        <h4 class="caption subtitle">& Phone</h4>
-                        <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                    </div> --}}
-                </li>
+
             </ul>
         </div>
-        <!-- ./Slider -->
-    </div> <!-- End slider area -->
-
-    <div class="promo-area">
-        <div class="zigzag-bottom"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo1">
-                        <i class="fa fa-refresh"></i>
-                        <p>30 ngày đổi trả</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo2">
-                        <i class="fa fa-truck"></i>
-                        <p>Miễn phí giao hàng</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo3">
-                        <i class="fa fa-lock"></i>
-                        <p>Thanh toán bảo mật</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-promo promo4">
-                        <i class="fa fa-gift"></i>
-                        <p>Khuyến mãi hấp dẫn</p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div> <!-- End promo area -->
-
+        
+    </div>
+    
     <div class="maincontent-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 main-col-md-12">
                     <div class="latest-product">
                         <a  href="{{ route('category-products', ['category' => 'dien-thoai']) }}"><h2 class="section-title">SẢN PHẨM NỐI BẬT</h2></a>
                         <div class="product-carousel">
@@ -203,7 +193,7 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 main-col-md-12">
                     <div class="brand-wrapper">
                         <div class="brand-list">
                             <img src="{{asset("public/img/brand1.png")}}" alt="">
@@ -225,7 +215,7 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 main-col-md-4">
                     <div class="single-product-widget">
                         <h2 class="product-wid-title">Bán chạy nhất</h2>
                         <a href="" class="wid-view-more">Xem tất cả</a>
@@ -240,7 +230,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 main-col-md-4">
                     <div class="single-product-widget">
                         <h2 class="product-wid-title">Recently Viewed</h2>
                         <a href="#" class="wid-view-more">Xem tất cả</a>
@@ -255,7 +245,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 main-col-md-4">
                     <div class="single-product-widget">
                         <h2 class="product-wid-title">Sản phẩm mới</h2>
                         <a href="#" class="wid-view-more">Xem tất cả</a>

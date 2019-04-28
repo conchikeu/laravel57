@@ -49,6 +49,19 @@ class UserController extends Controller
 
 
     }
+    public function resetIsAdmin(Request $request){
+        try{
+            $user = User::findOrFail($request->id);
+            $user->is_admin = bcrypt($request->is_admin);
+            $user->save();
+            return response()->json(['success'=> 'Reset admin thành công !']);
+        }
+        catch(\Exception $e){
+            return response()->json(['error'=> 'Không reset được admin !']);
+        }
+
+
+    }
 
     /**
      * Show the form for creating a new resource.

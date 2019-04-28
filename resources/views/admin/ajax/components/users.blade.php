@@ -9,7 +9,7 @@
             <th style="width: 50px">is_admin</th>
             <th style="width: 50px">Mật khẩu</th>
             <th style="width: 80px">Ngày đăng ký</th>
-            <th style="width: 80px">Thao tác</th>
+            <th style="width: 90px">Thao tác</th>
         </tr>
         </thead>
         <tbody>
@@ -18,7 +18,18 @@
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
-                <td>{{$user->is_admin}}</td>
+                <td>
+                    <div class="row">
+                       <div class="col-sm-3">
+                           <button class="btn btn-warning btn-xs is-admin-reset" style="margin:2px !important; padding:5px !important">
+                               <i class="fa fa-lock fa-fw"></i><span class="text-is-admin">Reset</span>
+                           </button>
+                       </div>
+                        <div class="col-sm-9">
+                            <input name='is_admin' type="text" class="form-control none-style pl-0"  readonly value="{{$user->is_admin}}" >
+                        </div>
+                    </div>
+                </td>
                 <td>
                     <div class="row">
                        <div class="col-sm-3">
@@ -30,14 +41,18 @@
                             <input name='password' type="password" class="form-control none-style pl-0"  readonly value="password" >
                         </div>
                     </div>
-
                 </td>
                 <td>{{$user->created_at}}</td>
                 <td>
                     <a href="{{ route('users-show',['id'=>$user->id]) }}" class="btn btn-info btn-xs" style="margin:2px !important">
                         <i class="fa fa-eye fa-fw"></i><span>Xem</span>
                     </a>
-                   <a href = 'delete/{{ $user->id }}' class="btn-delete"><i class="fa fa-trash "></i><span>Delete</span></a>
+                    <a href = 'delete/{{ $user->id }}' class="btn-delete">
+                        <i class="fa fa-trash "></i><span>Delete</span>
+                    </a>
+                    <!-- ----------------------------- -->
+                    
+                    <!-- ----------------------------- -->
 
                     {{--<a href="" class="btn btn-danger btn-xs  del" style="margin:2px !important" data-toggle="modal" data-target="#modal-del">--}}
                         {{--<i class="glyphicon glyphicon-trash fa-fw"></i><span>Xóa</span>--}}

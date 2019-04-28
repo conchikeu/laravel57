@@ -11,7 +11,7 @@
 @stop
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row2">
             <div class="col-md-12 ">
                 <img class="banner" src="{{asset('public/img/banner1.png')}}" width="50%"/>
                 <img class="banner" src="{{asset('public/img/banner2.png')}}" width="50%"/>
