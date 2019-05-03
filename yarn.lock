@@ -1862,9 +1862,9 @@ decompress-tar@^3.0.0:
     through2 "^0.6.1"
     vinyl "^0.4.3"
 
-decompress-tar@^4.0.0, decompress-tar@^4.1.0, decompress-tar@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/decompress-tar/-/decompress-tar-4.1.1.tgz#718cbd3fcb16209716e70a26b84e7ba4592e5af1"
+decompress-tar@^4.0.0, decompress-tar@^4.1.0, decompress-tar@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/decompress-tar/-/decompress-tar-4.4.2.tgz#718cbd3fcb16209716e70a26b84e7ba4592e5af1"
   dependencies:
     file-type "^5.2.0"
     is-stream "^1.1.0"
@@ -3909,9 +3909,9 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
-jquery@^3.2:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+jquery@^3.4.0:
+  version "3.4.0"
+  resolved "https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.3"
