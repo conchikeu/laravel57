@@ -2,7 +2,7 @@
     @forelse($products as $product)
         <div class="wp_product">
             <div class="single-shop-product">
-                <div class="product-upper">
+                                <div class="product-upper">
                     <img class='image'
                          src="@if($product->imageDetail()->first()) {{ asset('public/uploads/images/products/'.$product->imageDetail()->first()->image_detail) }} @endif"
                          alt="">
@@ -13,10 +13,11 @@
                     </div>
                     <div class="product-option-shop pt-5">
                         <button type="button" class="add_to_cart_button pull-left tryMe" value="{{$product->id}}">
-                            <i class="fa fa-shopping-cart"></i>&nbsp;Giỏ hàng
+                            <i class="fa fa-shopping-cart"></i>&nbsp;Thêm
                         </button>
                         <span class="pull-right"
                               style="padding:15px 5px 0px 0px">Sales: {{ $product->sales }}</span>
+                             
                     </div>
                 </div>
             </div>

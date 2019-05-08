@@ -10,7 +10,7 @@
     <div id="logo">
         <img src="{{asset('public/img/logo.png')}}" width='180px' height="30px">
         <div id="company">
-            <div>92 Quang Trung, Q. Hải Châu, TP. Đà Nẵng</div>
+            <div>117/6 Tôn Đản - Hòa An - Cẩm Lệ - Đà Nẵng</div>
             <div>02363 888 279</div>
             <div><a href="mailto:phanvan91@gmail.com">phanvan91@gmail.com</a></div>
         </div>

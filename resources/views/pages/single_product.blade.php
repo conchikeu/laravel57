@@ -21,61 +21,69 @@
             <div class="zigzag-bottom"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 single_products_row">
                         <div class="product-content-right">
                             <div class="product-breadcroumb">
                                 <a href="">Trang chủ</a>
                                 <a href="{{ route('subcate-products', ['slug' => $product->category->slug ]) }}">{{ $product->category->name  }}</a>
                                 <a href="">{{$product->name}}</a>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="product-images">
-                                        <div class="product-main-img ">
-                                            <img class="product-main-img2" src="@if($product->imageDetail->first()){{asset("public/uploads/images/products/" . $product->imageDetail->first()->image_detail)}} @endif"
-                                                 alt="">
-                                        </div>
+                            <div>
+                                <h2 class="product-name">{{$product->name}}</h2>   
+                            </div>
+                            <div class="single-product-wrap">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="product-images">
+                                            <div class="product-main-img ">
+                                                <img class="product-main-img2" src="@if($product->imageDetail->first()){{asset("public/uploads/images/products/" . $product->imageDetail->first()->image_detail)}} @endif"
+                                                     alt="">
+                                            </div>
 
-                                        <div class="product-gallery text-center">
-                                            @foreach($product->imageDetail as $key => $image)
-                                                @if($key > 0)
-                                                    <img src="{{asset("public/uploads/images/products/" . $image->image_detail)}}"
-                                                         alt="">
-                                                @endif
-                                            @endforeach
+                                            <div class="product-gallery text-center">
+                                                @foreach($product->imageDetail as $key => $image)
+                                                    @if($key > 0)
+                                                        <img src="{{asset("public/uploads/images/products/" . $image->image_detail)}}"
+                                                             alt="">
+                                                    @endif
+                                                @endforeach
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="product-inner">
-                                        <h2 class="product-name">{{$product->name}}</h2>
-                                        <div class="product-inner-price">
-                                            <ins style="font-size:20px">{{ number_format($product->price) }}đ</ins>
-                                            <div class="pull-right">
-                                                @if($product->quantity_store == 0)
-                                                    {!! trans('labels.status-product.2' ) !!}
-                                                @else
-                                                    {!! trans('labels.status-product.1' ) !!}
-                                                @endif
                                             </div>
                                         </div>
-                                        <form class="cart">
-                                            <button class="add_to_cart_button tryMe"  value="{{ $product->id }}"  type="button">Thêm giỏ hàng</button>
-                                        </form>
-                                        <div class="config">
-                                            <h3 class="">Thông số kỹ thuật</h3>
-                                            <ul class="parameter">
-                                                @foreach($product->configuration as $key => $value)
-                                                    <li class="g92_94_93">
-                                                        <span>{{ $key }}</span>
-                                                        <div>
-                                                            {{ $value }}
-                                                        </div>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="product-inner">
+                                            <div class="product-inner-price">
+                                                <ins style="font-size:20px">{{ number_format($product->price) }}đ</ins>
+                                                <div class="pull-right">
+                                                    @if($product->quantity_store == 0)
+                                                        {!! trans('labels.status-product.2' ) !!}
+                                                    @else
+                                                        {!! trans('labels.status-product.1' ) !!}
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="config">
+                                                <h3 class="">Thông số kỹ thuật</h3>
+                                                <ul class="parameter">
+                                                    @foreach($product->configuration as $key => $value)
+                                                        <li class="g92_94_93">
+                                                            <span>{{ $key }}</span>
+                                                            <div>
+                                                                {{ $value }}
+                                                            </div>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <form class="cart">
+                                                    <button class="add_to_cart_button tryMe"  value="{{ $product->id }}"  type="button">Thêm giỏ hàng</button>
+                                                    <button class="buy_to_cart_button tryMe"  value="{{ $product->id }}"  type="button">Mua Ngay</button>
+                                                </form>
+                                            </div>
+                                             
                                         </div>
                                     </div>
                                 </div>
@@ -99,7 +107,7 @@
                             </script>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 single_products_row" >
                         <div class="single-sidebar">
                             <h2 class="sidebar-title">Sản phẩm khác</h2>
                             @foreach($related as $product)

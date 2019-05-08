@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('public/admin/dist/css/skins/skin-blue.min.css')}}">
     <link rel="stylesheet" href="{{asset('public/css/nouislider.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the pages via file:// -->
     <!--[if lt IE 9]>

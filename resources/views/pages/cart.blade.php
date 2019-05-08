@@ -3,8 +3,8 @@
     <style>
         .plus{background:#5a88ca;border:none;width:23px}
         .button-delete{
-            border:0;
-            outline:none;
+            border: 0;
+            
         }
         .invalid-feedback{color:red}
         .shopping-item{
@@ -28,13 +28,10 @@
             </div>
         </div>
     </div> <!-- End Page title area -->
-
-
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-
                 <div class="col-md-12">
                     <div class="product-content-right">
                         <div class="woocommerce">
@@ -55,9 +52,8 @@
                                         @foreach($carts as $cart)
                                             <tr class="cart_item" id="delete-{{$cart->rowId}}">
                                                 <td class="product-remove">
-                                                    <button class="demo button-delete" value="{{$cart->rowId}}" >×</button>
+                                                    <button class="demo button-delete" value="{{$cart->rowId}}" ><i class="fa fa-trash" style="color:black"></i></button>
                                                 </td>
-
                                                 <td class="product-thumbnail">
                                                     <a href="single_product.blade.php">
                                                         <img width="145" height="145"
@@ -66,23 +62,27 @@
                                                              src="@if(!empty($cart->options['image'])){{asset('public/uploads/images/products/'.$cart->options['image']->image_detail)}} @endif">
                                                     </a>
                                                 </td>
-
                                                 <td class="product-name">
                                                     <a>{{$cart->name}}</a>
                                                 </td>
-
                                                 <td class="product-price">
                                                     <span class="amount">{{number_format($cart->price,0)}} VND</span>
                                                 </td>
-
                                                 <td class="product-quantity">
                                                     <div class="quantity buttons_added" id="change-{{$cart->rowId}}">
-                                                        <button type="button" class="plus cart-giam"  value="{{$cart->rowId}}"> - </button>
-                                                        <input type="number" size="4" class="input-text qty text" title="Qty" value="{{$cart->qty}}" min="1" step="1">
-                                                        <button type="button" class="plus cart-tang" value="{{$cart->rowId}}" > + </button>
+                                                        <ul class="alight2">
+                                                            <li>
+                                                                <button type="button" class="plus cart-tang" value="{{$cart->rowId}}" > + </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="plus cart-giam"  value="{{$cart->rowId}}"> - </button>
+                                                            </li>
+                                                        </ul>
+                                                        <input type="number" size="4" class="input-text qty text alight2" title="Qty" value="{{$cart->qty}}" min="1" step="1">
+                                                        
+                                                        
                                                     </div>
                                                 </td>
-
                                                 <td class="product-subtotal" id="total-{{$cart->rowId}}">
                                                     <span class="amount">{{ number_format($cart->qty * $cart->price,0) }} VND </span>
                                                 </td>
@@ -96,9 +96,7 @@
                                     </tbody>
                                 </table>
                             </form>
-
                             <div class="cart-collaterals">
-
                                 <div class="cross-sells woocommerce">
                                     <h2>Check Out</h2>
                                     <div class="row">
@@ -142,23 +140,18 @@
                                     </div>
                                     <br>
                                 </div>
-
-
                                 <div class="cart_totals ">
                                     <h2>Cart Totals</h2>
-
                                     <table cellspacing="0">
                                         <tbody>
                                         <tr class="cart-subtotal" id="cart-count">
                                             <th>Tổng số hàng </th>
                                             <td><span class="amount">{{Cart::count()}} sản phẩm</span></td>
                                         </tr>
-
                                         <tr class="shipping">
                                             <th>Shipping and Handling</th>
                                             <td>Free Shipping</td>
                                         </tr>
-
                                         <tr class="order-total" id="order-total">
                                             <th>Tổng tiền</th>
                                             <td><strong><span class="amount">{{Cart::subtotal(0)}} VND</span></strong> </td>
@@ -166,8 +159,6 @@
                                         </tbody>
                                     </table>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -175,8 +166,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -256,11 +245,18 @@
                     dataType:'json',
                     success:function(data){
                         console.log(data);
-                        var edit = '<div class="quantity buttons_added" id="change-'+data[0].rowId+'">\n' +
-                            '   <button type="button" class="plus cart-giam"  value="'+data[0].rowId+'"> - </button>\n' +
-                            ' <input type="number" size="4" class="input-text qty text" title="Qty" value="'+data[0].qty+'" min="1" step="1">\n' +
-                            '   <button type="button" class="plus cart-tang" value="'+data[0].rowId+'" > + </button>\n' +
-                            '     </div>';
+                        var edit = 
+                            '<ul class="alight2">'
+                                '<div class="quantity buttons_added" id="change-'+data[0].rowId+'">\n' +
+                                '<li>'
+                                    '<button type="button" class="plus cart-tang" value="'+data[0].rowId+'" > + </button>\n'
+                                '</li>' +
+                                '<li>'
+                                    '<button type="button" class="plus cart-giam"  value="'+data[0].rowId+'"> - </button>\n'
+                                '</li>' +
+                                    ' <input type="number" size="4" class="input-text qty text" title="Qty" value="'+data[0].qty+'" min="1" step="1">\n' 
+                                '</div>'+
+                            '</ul>';
 
                         var total = '<td class="product-subtotal" id="total-'+data[0].rowId+'">\n' +
                             '       <span class="amount">'+ $.number(data[0].qty * data[0].price)+' VND </span>\n' +

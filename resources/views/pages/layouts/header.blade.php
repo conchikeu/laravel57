@@ -1,3 +1,4 @@
+
 <header id="header">
         <div class="header-drop">
             <div class="header-wrap">
@@ -53,42 +54,27 @@
                                 </a>
                             </li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                                <span class="style-header-dropbtn">VNPost</span>
+                                <span class="style-header-dropbtn">Giao Hàng Tiết Kiệm</span>
                                 <i class="fa fa-chain i-rightfloat"></i>
                                 </a>
                             </li>
                             <li role="presentation" class="divider"></li>
                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                                <span class="style-header-dropbtn">VNPost</span>
+                                <span class="style-header-dropbtn">24h</span>
                                 <i class="fa fa-chain i-rightfloat"></i>
                                 </a>
-                            </li>                        </ul>
+                            </li>                        
+                        </ul>
                       </div>
                     </li>
                     <li class="header-li">
                       <div class="dropdown">
-                        <i class="fa fa-shopping-cart fa-shape"></i>
-                        <button class="header-li-span dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">
-                            <span>Giỏ Hàng</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                                <span class="style-header-dropbtn">VNPost</span>
-                                <i class="fa fa-chain i-rightfloat"></i>
-                                </a>
-                            </li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                                <span class="style-header-dropbtn">VNPost</span>
-                                <i class="fa fa-chain i-rightfloat"></i>
-                                </a>
-                            </li>
-                            <li role="presentation" class="divider"></li>
-                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                                <span class="style-header-dropbtn">VNPost</span>
-                                <i class="fa fa-chain i-rightfloat"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="http://storevuvan.com/my-cart">
+                            <i class="fa fa-shopping-cart fa-shape"></i>
+                            <button class="header-li-span dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">
+                                <span>Giỏ Hàng</span>
+                            </button>
+                        </a>
                       </div>
                     </li>
                 </ul>
@@ -97,7 +83,6 @@
         <nav class="header-menu">
             <div class="header-menu-wrap">
                 <ul class="fa-mnul clearfix">
-                    
                     @foreach($categories as $category)
                         @if($category->subcate->count() > 0)
                             <li class="dropdown">
