@@ -34,7 +34,7 @@
 
                 </ul>
                 </div>
-                <!-- <div class="box pull-right">
+                <div class="box pull-right">
                     <div class="container-2">
                         <span class="icon"><i class="fa fa-search"></i></span>
                         <input type="search" id="search" placeholder="Tìm kiếm..." />
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
             </div>
         </div>

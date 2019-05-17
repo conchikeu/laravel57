@@ -114,7 +114,7 @@
                                 <div class="thubmnail-recent">
                                     <img src="@if($product->imageDetail->first()) {{asset("public/uploads/images/products/" . $product->imageDetail->first()->image_detail )}} @endif"
                                          class="recent-thumb" alt="">
-                                    <h5><a href="">{{ $product->name }}</a></h5>
+                                    <h5><a href="{{ route('product-detail',[ 'id' => $product->id ]) }}">{{ $product->name }}</a></h5>
                                     <div class="product-sidebar-price">
                                         <ins>{{ number_format( $product->price ) }}đ</ins>
                                     </div>
@@ -127,7 +127,7 @@
                                 <div class="thubmnail-recent">
                                     <img src="@if($product->imageDetail->first()) {{asset("public/uploads/images/products/" . $product->imageDetail->first()->image_detail )}} @endif"
                                          class="recent-thumb" alt="">
-                                    <h5><a href="">{{ $product->name }}</a></h5>
+                                    <h5><a href="{{ route('product-detail',[ 'id' => $product->id ]) }}">{{ $product->name }}</a></h5>
                                     <div class="product-sidebar-price">
                                         <ins>{{ number_format( $product->price ) }}đ</ins>
                                     </div>

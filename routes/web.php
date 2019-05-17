@@ -29,6 +29,13 @@ Route::get('gen', function(){
     echo Hash::make('admin');
 });
 
+ Route::post('users/reset-pw', 'UserController@resetPassWord')->name('users-password');
+        Route::get('list-news', 'NewsController@list_news')->name('list-news');
+        Route::get('add-news', 'NewsController@add')->name('add-news');
+        Route::post('post_add_news', 'NewsController@post_add')->name('post_add_news');
+        Route::get('edit-news/{id}', 'NewsController@get_edit')->name('edit-news');
+        Route::post('post_edit_news/{id}', 'NewsController@edit')->name('post_edit_news');
+        Route::get('delete_news/{id}', 'NewsController@delete')->name('delete_news');
 
 
 Route::group(['middleware'=>'check_user'],function(){
@@ -76,6 +83,5 @@ Route::group(['namespace' => 'Web'],function() {
     Route::get('{category}', 'ProductController@index')->name('category-products');
     Route::get('subcate/{slug}', 'ProductController@getProductsBySub')->name('subcate-products');
     Route::get('product/{id}', 'ProductController@show')->name('product-detail');
-
-
 });
+

@@ -7,13 +7,22 @@
                 </a>
                 <div class="header-search">
                     <form action="" method="get" autocomplete="off">
-                        <input class="fa-stxt" type="text" name="" placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm" autocomplete="off" maxlength="50">
+                        <input id="search" class="fa-stxt" type="text" name="" placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm" autocomplete="off" maxlength="50">
+                         <div class=" wp-search p-5 pull-right ">
+                            <div class="search ">
+                                <div id="search-result">
+                                </div>
+                                <i><span class="count-result pull-left"></span>&nbsp; kết quả tìm thấy !</i>
+                                <span class="pull-right" id="more-product">Xem thêm</span>
+                            </div>
+                        </div>
                         <button type="submit" class="header-search-button"><i class="fa fa-search"></i></button>
                         <div class="fa-sresult" style="display : block !important">
                             <div class="fs-sremain">
                                 <ul></ul>
                             </div>
                         </div>
+
                     </form>
                 </div>
                 <ul class="header-iconshape">
